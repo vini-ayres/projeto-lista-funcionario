@@ -138,7 +138,7 @@ int main() {
 				cout << "Encerrando programa...\n";
 				break;
 			
-      			case 1:
+   case 1:
 				cout << line << endl;
         			cout << "Digite o prontuario: ";
 				cin >> prontuario;
