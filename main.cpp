@@ -31,6 +31,7 @@ void printLista(Funcionario* lista) {
 	Funcionario* aux;
 	string line(20, '-');
 	aux = lista;
+	double totalSalarios = 0;
 	if (isEmpty(lista)) {
 		cout << "Lista vazia." << endl;
 	} else {
@@ -41,8 +42,10 @@ void printLista(Funcionario* lista) {
 			cout << "Nome: " << aux->nome << endl;
 			cout << "Salário: " << aux->salario << endl;
 			cout << line << endl;
+			totalSalarios = totalSalarios + aux->salario;
 			aux = aux->prox;
 		}
+		cout << "\nTotal de salários: " << totalSalarios << endl;
 		cout << "\nFim da lista." << endl;
 	}
 }
