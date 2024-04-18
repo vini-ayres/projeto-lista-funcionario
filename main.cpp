@@ -4,9 +4,9 @@
 using namespace std;
 
 struct Funcionario {
-  int prontuario;
-  string nome;
-  double salario;
+	int prontuario;
+	string nome;
+	double salario;
 	Funcionario *prox;
 };
 
@@ -19,10 +19,10 @@ bool isEmpty(Funcionario* lista) {
 }
 
 Funcionario* insert(Funcionario* lista, int prontuario, string nome, double salario) {
-  Funcionario* novo = new Funcionario();
-  novo->prontuario = prontuario;
-  novo->nome = nome;
-  novo->salario = salario;
+	Funcionario* novo = new Funcionario();
+	novo->prontuario = prontuario;
+	novo->nome = nome;
+	novo->salario = salario;
 	novo->prox = lista;
 	return novo;
 };
@@ -112,44 +112,44 @@ void freeLista(Funcionario* lista) {
 int main() {
 	setlocale(LC_ALL, "");
 	
-  Funcionario *listaFuncionarios;
+  	Funcionario *listaFuncionarios;
 	listaFuncionarios = init();
 	int prontuario;
 	string nome;
 	double salario;
-  int opcao;
+  	int opcao;
   
-  do {
+  	do {
 		string line(40, '-');
-    cout << "0. Sair\n";
-    cout << "1. Incluir\n";
-    cout << "2. Excluir\n";
-    cout << "3. Pesquisar\n";
-    cout << "4. Listar\n";
-    cout << "Opção: ";
-    cin >> opcao;
+		cout << "0. Sair\n";
+		cout << "1. Incluir\n";
+		cout << "2. Excluir\n";
+		cout << "3. Pesquisar\n";
+		cout << "4. Listar\n";
+		cout << "Opção: ";
+		cin >> opcao;
 
-    switch (opcao) {
+    		switch (opcao) {
 			case 0:
 				cout << line << endl;
 				cout << "Encerrando programa...\n";
 				break;
 			
-      case 1:
+      			case 1:
 				cout << line << endl;
-        cout << "Digite o prontuario: ";
+        			cout << "Digite o prontuario: ";
 				cin >> prontuario;
 				if (find(listaFuncionarios, prontuario)) {
 					cout << "Funcionário já cadastrado!\n";
 					cout << line << endl;
 					break;
 				}
-        cout << "Digite o nome: ";
+				cout << "Digite o nome: ";
 				cin >> nome;
-        cout << "Digite o salario: ";
+        			cout << "Digite o salario: ";
 				cin >> salario;
 				listaFuncionarios = insert(listaFuncionarios, prontuario, nome, salario);
-        cout << "Funcionário cadastrado com sucesso!" << endl;
+        			cout << "Funcionário cadastrado com sucesso!" << endl;
 				cout << line << endl;
 			break;
 
