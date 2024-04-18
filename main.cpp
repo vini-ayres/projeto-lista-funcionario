@@ -59,9 +59,9 @@ void printFuncionario(Funcionario* lista, int prontuario) {
 	if (aux) {
 		cout << "\nFuncionário encontrado: " << endl;
 		cout << endl;
-		cout << "Prontuario: " << aux->prontuario << endl;
+		cout << "Prontuário: " << aux->prontuario << endl;
 		cout << "Nome: " << aux->nome << endl;
-		cout << "Salario: " << aux->salario << endl;
+		cout << "Salário: " << aux->salario << endl;
 	} else {
 		cout << "\nFuncionário não encontrado." << endl;
 	}
